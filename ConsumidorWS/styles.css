@@ -1,0 +1,28 @@
+﻿body {
+    background-color: #ffe5ec;
+}
+
+.navbar {
+    background-color: #010101;
+}
+
+.nav li a {
+    color: #ffffff;
+}
+
+.jumbotron {
+    background-color: #ff8fab;
+}
+
+.btn {
+    background-color: #000000;
+}
+
+    .btn:hover {
+        background-color: #fb6192;
+    }
+
+.label {
+    font-size: 16px;
+    color: #fb6192;
+}

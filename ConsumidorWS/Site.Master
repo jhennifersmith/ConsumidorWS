@@ -16,6 +16,8 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <link href="styles.css" rel="stylesheet" />
+
 </head>
 <body>
     <form runat="server">
@@ -51,10 +53,10 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/About">Calculadora</a></li>
-                        <li><a runat="server" href="~/Contact">Fatorial</a></li>
-                        <li><a runat="server" href="~/Contact">IMC</a></li>
-                        <li><a runat="server" href="~/Contact">Conversor de medidas</a></li>
+                        <li><a runat="server" href="~/Calculadora">Calculadora</a></li>
+                        <li><a runat="server" href="~/Fatorial">Fatorial</a></li>
+                        <li><a runat="server" href="~/IMC">IMC</a></li>
+                        <li><a runat="server" href="~/ConversorMedidas">Conversor de medidas</a></li>
                     </ul>
                 </div>
             </div>
