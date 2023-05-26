@@ -8,7 +8,7 @@
     <asp:TextBox ID="valor1" class="form-control" runat="server" placeholder="Valor 1"></asp:TextBox><br />
     <div class="form-group">
         <label for="operador" class="label">Operador:</label>
-        <select id="operador" name="operador" class="form-control" runat="server">
+        <select ID="operador" name="operador" class="form-control" runat="server">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
@@ -19,6 +19,8 @@
     <asp:TextBox ID="valor2" class="form-control" runat="server" placeholder="Valor 2"></asp:TextBox><br />
     <br />
     <asp:Button ID="btnCalcular" class="btn btn-primary" runat="server" Text="Calcular" OnClick="btnCalcular_Click" /><br />
-
+    <br />
+    <asp:Label ID="Resultado" Text="Resultado:" class="label" runat="server"> </asp:Label>
+    <asp:Label ID="lblResultado" class="label" runat="server" Text="teste"></asp:Label>
 
 </asp:Content>

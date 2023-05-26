@@ -6,14 +6,18 @@
     <p>Use this area to provide additional information.</p>
     <asp:Label ID="lblMetros" class="label" runat="server" Text="Metros:"></asp:Label>
     <asp:TextBox ID="metros" class="form-control" runat="server" placeholder="Metros"></asp:TextBox><br />
-       <div class="form-group">
-        <label for="operador" class="label">Tipo Medida:</label>
-        <select id="operador" name="operador" class="form-control" runat="server">
-            <option value="+">Milhas</option>
-            <option value="-">Pés</option>
-            <option value="*">Centimetros</option>
-            <option value="/">Parsecs</option>
+    <div class="form-group">
+        <label for="medida" class="label">Tipo Medida:</label>
+        <select id="medida" name="medida" class="form-control" runat="server">
+            <option value="quilometros">Quilometros</option>
+            <option value="centimetros">Centimetros</option>
+            <option value="milimetros">Milimetros</option>
+            <option value="decimetros">Decimetros</option>
         </select>
     </div>
     <asp:Button ID="btnCalcular" class="btn btn-primary" runat="server" Text="Calcular" OnClick="btnCalcular_Click" /><br />
+    <br />
+    <asp:Label ID="Resultado" Text="Resultado:" class="label" runat="server"> </asp:Label>
+    <asp:Label ID="lblResultado" class="label" runat="server" Text=""></asp:Label>
+
 </asp:Content>

@@ -24,13 +24,13 @@ namespace ConsumidorWS
         protected global::System.Web.UI.WebControls.Label lblPeso;
 
         /// <summary>
-        /// Controle peso.
+        /// Controle txtPeso.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox peso;
+        protected global::System.Web.UI.WebControls.TextBox txtPeso;
 
         /// <summary>
         /// Controle lblAltura.
@@ -42,13 +42,13 @@ namespace ConsumidorWS
         protected global::System.Web.UI.WebControls.Label lblAltura;
 
         /// <summary>
-        /// Controle altura.
+        /// Controle txtAltura.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox altura;
+        protected global::System.Web.UI.WebControls.TextBox txtAltura;
 
         /// <summary>
         /// Controle btnCalcular.
@@ -58,5 +58,23 @@ namespace ConsumidorWS
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCalcular;
+
+        /// <summary>
+        /// Controle Resultado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Resultado;
+
+        /// <summary>
+        /// Controle lblResultado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultado;
     }
 }

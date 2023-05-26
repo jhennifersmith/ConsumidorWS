@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="Calculadora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="v1" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="v2" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="op" type="s1:char" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculadoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculadoraResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fatorial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="v1" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FatorialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FatorialResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Imc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="altura" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="peso" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImcResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Conversao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="valorMetros" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoMedida" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConversaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConversaoResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CalculadoraSoapIn">
+    <wsdl:part name="parameters" element="tns:Calculadora" />
+  </wsdl:message>
+  <wsdl:message name="CalculadoraSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculadoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="FatorialSoapIn">
+    <wsdl:part name="parameters" element="tns:Fatorial" />
+  </wsdl:message>
+  <wsdl:message name="FatorialSoapOut">
+    <wsdl:part name="parameters" element="tns:FatorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImcSoapIn">
+    <wsdl:part name="parameters" element="tns:Imc" />
+  </wsdl:message>
+  <wsdl:message name="ImcSoapOut">
+    <wsdl:part name="parameters" element="tns:ImcResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConversaoSoapIn">
+    <wsdl:part name="parameters" element="tns:Conversao" />
+  </wsdl:message>
+  <wsdl:message name="ConversaoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConversaoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSCalculadora1Soap">
+    <wsdl:operation name="Calculadora">
+      <wsdl:input message="tns:CalculadoraSoapIn" />
+      <wsdl:output message="tns:CalculadoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fatorial">
+      <wsdl:input message="tns:FatorialSoapIn" />
+      <wsdl:output message="tns:FatorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Imc">
+      <wsdl:input message="tns:ImcSoapIn" />
+      <wsdl:output message="tns:ImcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Conversao">
+      <wsdl:input message="tns:ConversaoSoapIn" />
+      <wsdl:output message="tns:ConversaoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSCalculadora1Soap" type="tns:WSCalculadora1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Calculadora">
+      <soap:operation soapAction="http://tempuri.org/Calculadora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fatorial">
+      <soap:operation soapAction="http://tempuri.org/Fatorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Imc">
+      <soap:operation soapAction="http://tempuri.org/Imc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Conversao">
+      <soap:operation soapAction="http://tempuri.org/Conversao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSCalculadora1Soap12" type="tns:WSCalculadora1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Calculadora">
+      <soap12:operation soapAction="http://tempuri.org/Calculadora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fatorial">
+      <soap12:operation soapAction="http://tempuri.org/Fatorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Imc">
+      <soap12:operation soapAction="http://tempuri.org/Imc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Conversao">
+      <soap12:operation soapAction="http://tempuri.org/Conversao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSCalculadora1">
+    <wsdl:port name="WSCalculadora1Soap" binding="tns:WSCalculadora1Soap">
+      <soap:address location="https://localhost:44308/WSCalculadora1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSCalculadora1Soap12" binding="tns:WSCalculadora1Soap12">
+      <soap12:address location="https://localhost:44308/WSCalculadora1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
