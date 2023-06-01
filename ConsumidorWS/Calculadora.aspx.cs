@@ -17,11 +17,11 @@ namespace ConsumidorWS
         protected void btnCalcular_Click(object sender, EventArgs e)
         {
             CalculadoraWS.WSCalculadora1 ws = new CalculadoraWS.WSCalculadora1();
-            float v1 = (float)Convert.ToDecimal (valor1.Text);
-            float v2 = (float)Convert.ToDecimal(valor2.Text);
+            decimal v1 = Convert.ToDecimal (valor1.Text);
+            decimal v2 = Convert.ToDecimal(valor2.Text);
             char op = Convert.ToChar(operador.Value);
-            String resultado = ws.Calculadora(v1, v2, op);
-            lblResultado.Text = resultado;
+            decimal resultado = ws.Calculadora(v1, v2, op);
+            lblResultado.Text = resultado.ToString();
             lblResultado.Visible = true;
         }
     }

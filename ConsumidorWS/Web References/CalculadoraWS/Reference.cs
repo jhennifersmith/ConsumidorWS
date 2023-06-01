@@ -89,21 +89,21 @@ namespace ConsumidorWS.CalculadoraWS {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Calculadora", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string Calculadora(float v1, float v2, char op) {
+        public decimal Calculadora(decimal v1, decimal v2, char op) {
             object[] results = this.Invoke("Calculadora", new object[] {
                         v1,
                         v2,
                         op});
-            return ((string)(results[0]));
+            return ((decimal)(results[0]));
         }
         
         /// <remarks/>
-        public void CalculadoraAsync(float v1, float v2, char op) {
+        public void CalculadoraAsync(decimal v1, decimal v2, char op) {
             this.CalculadoraAsync(v1, v2, op, null);
         }
         
         /// <remarks/>
-        public void CalculadoraAsync(float v1, float v2, char op, object userState) {
+        public void CalculadoraAsync(decimal v1, decimal v2, char op, object userState) {
             if ((this.CalculadoraOperationCompleted == null)) {
                 this.CalculadoraOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCalculadoraOperationCompleted);
             }
@@ -151,7 +151,7 @@ namespace ConsumidorWS.CalculadoraWS {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Imc", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string Imc(float altura, float peso) {
+        public string Imc(decimal altura, decimal peso) {
             object[] results = this.Invoke("Imc", new object[] {
                         altura,
                         peso});
@@ -159,12 +159,12 @@ namespace ConsumidorWS.CalculadoraWS {
         }
         
         /// <remarks/>
-        public void ImcAsync(float altura, float peso) {
+        public void ImcAsync(decimal altura, decimal peso) {
             this.ImcAsync(altura, peso, null);
         }
         
         /// <remarks/>
-        public void ImcAsync(float altura, float peso, object userState) {
+        public void ImcAsync(decimal altura, decimal peso, object userState) {
             if ((this.ImcOperationCompleted == null)) {
                 this.ImcOperationCompleted = new System.Threading.SendOrPostCallback(this.OnImcOperationCompleted);
             }
@@ -182,20 +182,20 @@ namespace ConsumidorWS.CalculadoraWS {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Conversao", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public float Conversao(float valorMetros, string tipoMedida) {
+        public decimal Conversao(decimal valorMetros, string tipoMedida) {
             object[] results = this.Invoke("Conversao", new object[] {
                         valorMetros,
                         tipoMedida});
-            return ((float)(results[0]));
+            return ((decimal)(results[0]));
         }
         
         /// <remarks/>
-        public void ConversaoAsync(float valorMetros, string tipoMedida) {
+        public void ConversaoAsync(decimal valorMetros, string tipoMedida) {
             this.ConversaoAsync(valorMetros, tipoMedida, null);
         }
         
         /// <remarks/>
-        public void ConversaoAsync(float valorMetros, string tipoMedida, object userState) {
+        public void ConversaoAsync(decimal valorMetros, string tipoMedida, object userState) {
             if ((this.ConversaoOperationCompleted == null)) {
                 this.ConversaoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnConversaoOperationCompleted);
             }
@@ -248,10 +248,10 @@ namespace ConsumidorWS.CalculadoraWS {
         }
         
         /// <remarks/>
-        public string Result {
+        public decimal Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
+                return ((decimal)(this.results[0]));
             }
         }
     }
@@ -326,10 +326,10 @@ namespace ConsumidorWS.CalculadoraWS {
         }
         
         /// <remarks/>
-        public float Result {
+        public decimal Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((float)(this.results[0]));
+                return ((decimal)(this.results[0]));
             }
         }
     }

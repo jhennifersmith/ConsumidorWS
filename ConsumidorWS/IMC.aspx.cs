@@ -16,8 +16,8 @@ namespace ConsumidorWS
         protected void btnCalcular_Click(object sender, EventArgs e)
         {
             CalculadoraWS.WSCalculadora1 ws = new CalculadoraWS.WSCalculadora1();
-            float peso = (float)Convert.ToDecimal(txtPeso.Text);
-            float altura = (float)Convert.ToDecimal(txtAltura.Text);
+            decimal peso = Convert.ToDecimal(txtPeso.Text);
+            decimal altura = Convert.ToDecimal(txtAltura.Text);
             string resultado = ws.Imc(altura, peso);
 
             lblResultado.Text = resultado.ToString();

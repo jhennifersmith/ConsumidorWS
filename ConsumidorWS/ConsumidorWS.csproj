@@ -163,10 +163,10 @@
     <Content Include="Site.Master" />
     <Content Include="styles.css" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web References\CalculadoraWS\Reference.map">
+    <None Include="Web References\CalculadoraWS\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Web References\CalculadoraWS\WSCalculadora1.disco" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />

@@ -17,9 +17,9 @@ namespace ConsumidorWS
         protected void btnCalcular_Click(object sender, EventArgs e)
         {
             CalculadoraWS.WSCalculadora1 ws = new CalculadoraWS.WSCalculadora1();
-            float valorMetros = (float)Convert.ToDecimal(metros.Text);
+            decimal valorMetros = Convert.ToDecimal(metros.Text);
             string tipoMedida = Convert.ToString(medida.Value);
-            float resultado = ws.Conversao(valorMetros, tipoMedida);
+            decimal resultado = ws.Conversao(valorMetros, tipoMedida);
 
             lblResultado.Text = resultado.ToString();
             lblResultado.Visible = true;
